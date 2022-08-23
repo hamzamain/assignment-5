@@ -11,7 +11,12 @@ function getInputValueById(fieldId){
     const inputField = document.getElementById(fieldId);
     const inputValueString = inputField.value;
     const inputValue = parseFloat(inputValueString);
-    return inputValue;
+    if(isNaN(inputValue)){
+        return;
+    }
+    else{
+        return inputValue;
+    }
 }
 function steValueById(elementId, newValue){
     const elementField = document.getElementById(elementId);
@@ -25,12 +30,17 @@ console.log(liArray.length);
 
 function playerExpence(){
     const perPlayer = getInputValueById('per-player');
-
-    // console.log(perPlayer);
+    if(isNaN(perPlayer)){
+        document.getElementById('per-player').value = '';
+        return;
+    }
+    else{
+        // console.log(perPlayer);
     const totalPlayer = liArray.length;
     // console.log(totalPlayer);
     const playerExpence = perPlayer * totalPlayer;
     // console.log(playerExpence)
     return playerExpence;
+    }
     
 }

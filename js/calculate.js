@@ -1,4 +1,10 @@
 document.getElementById('calc-btn').addEventListener('click',function(){
     const totalPlayerExpence = playerExpence();
-    steValueById('player-expence',totalPlayerExpence);
+    if(isNaN(totalPlayerExpence)){
+        alert('plese enter a number to per player cost field')
+        return;
+    }
+    else{
+        steValueById('player-expence',totalPlayerExpence);
+    }
 })
