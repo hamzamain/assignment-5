@@ -5,7 +5,7 @@ document.getElementById('cards-perants').addEventListener('click',function(event
 //    console.log(clickedElement)
    if(clickedElementValue === 'SELECT'){
     const playerName = clickedElement.parentNode.children[0].innerText;
-    if(totalPlayer <= 4){
+    if(liArray.length <= 4){
         const li = document.createElement('li');
     li.classList.add('li-class');
     li.innerText = playerName;
