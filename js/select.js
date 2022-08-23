@@ -17,6 +17,9 @@ document.getElementById('cards-perants').addEventListener('click',function(event
     // console.log(liContainer);
     console.log(liArray.length);
     }
+    else{
+        alert('you have fulfilled the selection limit');
+    }
 
 }
 })
